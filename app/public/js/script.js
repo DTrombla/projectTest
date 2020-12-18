@@ -22,7 +22,7 @@ choices();
         $("#hotels").html("")
         $("#restaurants").html("")        
          
-        const queryURL1 = "http://localhost:8080/api/restaurants"
+        const queryURL1 = "https://nameless-plateau-64183.herokuapp.com/api/restaurants"
         $.ajax({
             header: origin,
             url: queryURL1,
@@ -48,7 +48,7 @@ choices();
                 }
             }   
         });
-        const queryURL2 = "http://localhost:8080/api/attractions"
+        const queryURL2 = "https://nameless-plateau-64183.herokuapp.com/api/attractions"
         $.ajax({
             header: origin,
             url: queryURL2,
@@ -74,7 +74,7 @@ choices();
                 }
             }   
         });
-        const queryURL3 = "http://localhost:8080/api/hotels"
+        const queryURL3 = "https://nameless-plateau-64183.herokuapp.com/api/hotels"
         $.ajax({
             header: origin,
             url: queryURL3,
@@ -141,7 +141,7 @@ function createMessage(){
         email: $("#email").val().trim(),
         message: $("#location").val().trim()
     }
-    var queryURL = "http://localhost:8080/api/contacts/"
+    var queryURL = "https://nameless-plateau-64183.herokuapp.com/api/contacts"
     $.ajax({
         header: origin,
         url: queryURL,
