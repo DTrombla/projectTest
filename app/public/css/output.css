@@ -1,0 +1,121 @@
+body {
+  font: 100% "Piazzolla", serif;
+  background-image: url("https://handluggageonly.co.uk/wp-content/uploads/2018/02/Hand-Luggage-Only-8-5.jpg");
+  background-size: 100% auto;
+  background-repeat: repeat;
+  letter-spacing: 0.2rem;
+}
+
+#main,
+#sub1,
+#sub2,
+#carousel,
+#submit {
+  color: gray;
+  padding: 1.5rem;
+  margin: 2rem;
+  background-color: #f2f3f4;
+  text-align: center;
+  box-shadow: 0px 2px 5px;
+}
+
+#italiatoday{
+  width:15%;
+  height:auto;
+}
+#food {
+  color: #585858;
+}
+
+#food:hover {
+  color: #800020!important;
+}
+
+
+#favorite{
+  color: gold;
+}
+
+.addfav{
+  background-color: transparent;
+  border-color: transparent;
+}
+
+#searchBtn2{
+  background-color: #f2f3f4;
+  color:#4A5D23;
+}
+
+h1,
+h2, 
+h4{
+  color:#4A5D23;
+}
+
+
+
+.secret{
+  font-size: 0px;
+}
+
+.a, .b, .c, .d, .e, .f{ 
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 300px;
+  height: 300px; 
+  
+}
+
+.a{
+  background-image: url('../music/musicplayer/modugno.png');  
+}
+
+.b{
+background-image: url('../music/musicplayer/battisti.jpg');
+}
+
+.c{
+background-image: url('../music/musicplayer/bocelli.jpg');
+}
+
+.d{
+background-image: url('../music/musicplayer/mina.jpg');
+}
+
+.e{
+background-image: url('../music/musicplayer/vasco.jpg');
+}
+
+.f{
+background-image: url('../music/musicplayer/afterhours.jpg');
+}
+
+.song{
+  font-size: 0;
+  width: 30%; 
+  height: 160px;
+  box-shadow: 2px 2px 5px rgb(243, 243, 243);
+  border-radius: 10px; 
+  cursor: pointer;
+  padding: 10%;
+}
+
+main{
+  margin: 4%;
+  width: 100%; 
+  justify-content: space-around;  
+  background-color: transparent;
+ }
+
+ #music{
+   text-align: center;
+   width: 100%; 
+   border: 1px solid rgb(177, 170, 170);
+   justify-content: space-around;   
+   background-color: #f2f3f4;
+ }
+
+
+
+/*# sourceMappingURL=output.css.map */
+

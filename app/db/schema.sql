@@ -1,0 +1,4 @@
+
+DROP DATABASE IF EXISTS `italia`;
+CREATE DATABASE italia;
+USE italia;
