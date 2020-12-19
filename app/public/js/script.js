@@ -30,23 +30,26 @@ choices();
         }).then(function(response) {
             const arr = response.sort((a, b) => (a.rating < b.rating) ? 1 : -1)
             for(let i = 0; i < arr.length; i++){
-                if(arr[i].location.toLowerCase() == $("#citySearch").val().toLowerCase()){
-                    const card = $(`<div class="container" id="sub1">
-                    <h4> Restaurants <button class="addfav"><i class="fas fa-star" id="favorite restaurant/`+arr[i].id+`"></i></button></h4>
-                    <div class="card">
-                      <div class="card-body">
-                        <h2 class="">`+arr[i].name+`</h2>
-                        <img src="`+arr[i].image+`" width = 200px></img>
-                        <p>Rating: `+ arr[i].rating+`/5</p>
-                        <p>Price: `+arr[i].price+`</p>
-                        <br>
-                        <a target = "_blank"href = "`+ arr[i].url+`"><button id="buttonLink"><i class="hotelLink">View more details</i></button></a>
-                      </div>
-                    </div>           
-                  </div>`)
-                $("#restaurants").append(card)
-                }
-            }   
+                if(arr[i].location == null){}
+                else{
+                    if(arr[i].location.toLowerCase() == $("#citySearch").val().toLowerCase()){
+                        const card = $(`<div class="container" id="sub1">
+                        <h4> Restaurants <button class="addfav"><i class="fas fa-star" id="favorite restaurant/`+arr[i].id+`"></i></button></h4>
+                        <div class="card">
+                          <div class="card-body">
+                            <h2 class="">`+arr[i].name+`</h2>
+                            <img src="`+arr[i].image+`" width = 200px></img>
+                            <p>Rating: `+ arr[i].rating+`/5</p>
+                            <p>Price: `+arr[i].price+`</p>
+                            <br>
+                            <a target = "_blank"href = "`+ arr[i].url+`"><button id="buttonLink"><i class="hotelLink">View more details</i></button></a>
+                          </div>
+                        </div>           
+                      </div>`)
+                    $("#restaurants").append(card)
+                    }
+                }   
+            }
         });
         const queryURL2 = "https://nameless-plateau-64183.herokuapp.com/api/attractions"
         $.ajax({
@@ -56,6 +59,8 @@ choices();
         }).then(function(response) {
             const arr = response.sort((a, b) => (a.rating < b.rating) ? 1 : -1)
             for(let i = 0; i < arr.length; i++){
+                if(arr[i].location == null){}
+                else{
                 if(arr[i].location.toLowerCase() == $("#citySearch").val().toLowerCase()){
                     const card = $(`<div class="container" id="sub1">
                     <h4> Attractions <button class="addfav"><i class="fas fa-star" id="favorite attraction/`+arr[i].id+`"></i></button></h4>
@@ -72,6 +77,7 @@ choices();
                   </div>`)
                 $("#attractions").append(card)
                 }
+                }
             }   
         });
         const queryURL3 = "https://nameless-plateau-64183.herokuapp.com/api/hotels"
@@ -82,6 +88,8 @@ choices();
         }).then(function(response) {
             const arr = response.sort((a, b) => (a.rating < b.rating) ? 1 : -1)
             for(let i = 0; i < arr.length; i++){
+                if(arr[i].location == null){}
+                else{
                 if(arr[i].location.toLowerCase() == $("#citySearch").val().toLowerCase()){
                     const card = $(`<div class="container" id="sub1">
                     <h4> Hotels<button class="addfav"><i class="fas fa-star" id="favorite hotel/`+arr[i].id+`"></i></button></h4>
@@ -98,6 +106,7 @@ choices();
                 $("#hotels").append(card)
                 }
             }  
+            }
         });
         
     }
